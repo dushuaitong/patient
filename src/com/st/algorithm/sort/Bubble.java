@@ -9,6 +9,14 @@ import com.st.algorithm.common.Base;
  */
 public class Bubble extends Base {
 
+    @Override
+    protected void run() {
+        bubbleSortVersion_3();
+        // bubbleSortVersion_2();
+        // bubbleSortVersion_1_1();
+        // bubbleSortVersion_1();
+    }
+
     public void bubbleSortVersion_1() {
         for (int j = 0; j < integers.length; j++) {
             for (int i = 0; i < integers.length-j-1; ++i) {
@@ -65,14 +73,6 @@ public class Bubble extends Base {
                 }
             }
         }
-    }
-
-    @Override
-    protected void run() {
-        bubbleSortVersion_3();
-        // bubbleSortVersion_2();
-        // bubbleSortVersion_1_1();
-        // bubbleSortVersion_1();
     }
 
     @Override

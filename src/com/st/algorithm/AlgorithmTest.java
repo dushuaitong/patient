@@ -2,6 +2,7 @@ package com.st.algorithm;
 
 import com.st.algorithm.common.Base;
 import com.st.algorithm.sort.Bubble;
+import com.st.algorithm.sort.SelectionSort;
 
 /**
  * @author dushuaitong
@@ -10,7 +11,7 @@ import com.st.algorithm.sort.Bubble;
  */
 public class AlgorithmTest {
     public static void main(String[] args) {
-        Base[] bases = new Base[] { new Bubble() };
+        Base[] bases = new Base[] { /*new Bubble(),*/ new SelectionSort() };
         for (Base basis : bases) {
             basis.testPerformance();
         }
