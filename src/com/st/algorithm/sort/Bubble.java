@@ -1,7 +1,6 @@
 package com.st.algorithm.sort;
 
 import com.st.algorithm.common.Base;
-import com.st.algorithm.common.util.Printer;
 
 /**
  * @author dushuaitong
