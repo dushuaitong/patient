@@ -1,4 +1,4 @@
-package com.st.algorithm;
+package com.st.algorithm.test;
 
 import com.st.algorithm.common.Base;
 import com.st.algorithm.sort.Bubble;
