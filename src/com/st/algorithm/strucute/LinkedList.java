@@ -4,11 +4,12 @@ import com.st.algorithm.strucute.common.AbstractList;
 
 /**
  * @author dushuaitong
- * @description: 单向链表
+ * @description: 双向链表
  * @date 2021/11/24
  */
 public class LinkedList<E> extends AbstractList<E> {
     private Node<E> first;
+    private Node<E> last;
 
     @Override
     public E get(int index) {
@@ -26,11 +27,24 @@ public class LinkedList<E> extends AbstractList<E> {
     @Override
     public void add(int index, E element) {
         rangeCheckForAdd(index);
-        if (index == 0) {
-            first = new Node<>(element, first);
+        if (index == size) {
+            Node<E> oldLast = last;
+            last = new Node<>(last, element, null);
+            if (oldLast == null) {
+                first = last;
+            } else {
+                oldLast.next = last;
+            }
         } else {
-            Node<E> prev = node(index - 1);
-            prev.next = new Node<>(element, prev.next);
+            Node<E> next = node(index);
+            Node<E> prev = next.prev;
+            Node<E> newNode = new Node<>(prev, element, next);
+            next.prev = newNode;
+            if (prev == null) {
+                first = newNode;
+            } else {
+                prev.next = newNode;
+            }
         }
         size++;
     }
@@ -38,16 +52,21 @@ public class LinkedList<E> extends AbstractList<E> {
     @Override
     public E remove(int index) {
         rangeCheck(index);
-        Node<E> old = first;
-        if (index == 0) {
-            first = first.next;
+        Node<E> node = node(index);
+        Node<E> prev = node.prev;
+        Node<E> next = node.next;
+        if (prev == null) {
+            first = next;
         } else {
-            Node<E> prev = node(index - 1);
-            old = prev.next;
-            prev.next = prev.next.next;
+            prev.next = next;
+        }
+        if (next == null) {
+            last = prev;
+        } else {
+            next.prev = prev;
         }
         size--;
-        return old.element;
+        return node.element;
     }
 
     @Override
@@ -75,6 +94,7 @@ public class LinkedList<E> extends AbstractList<E> {
     @Override
     public void clear() {
         first = null;
+        last = null;
         size = 0;
     }
 
@@ -85,11 +105,19 @@ public class LinkedList<E> extends AbstractList<E> {
      */
     private Node<E> node(int index) {
         rangeCheck(index);
-        Node<E> node = first;
-        for (int i = 0; i < index; i ++) {
-            node = node.next;
+        if (index < (size >> 1)) {
+            Node<E> node = first;
+            for (int i = 0; i < index; i ++) {
+                node = node.next;
+            }
+            return node;
+        } else {
+            Node<E> node = last;
+            for (int i = size - 1; i > index; i --) {
+                node = node.prev;
+            }
+            return node;
         }
-        return node;
     }
 
     @Override
@@ -101,7 +129,7 @@ public class LinkedList<E> extends AbstractList<E> {
             if (i != 0) {
                 sb.append(", ");
             }
-            sb.append(node.element);
+            sb.append(node);
             node = node.next;
         }
         sb.append("]");
@@ -111,8 +139,10 @@ public class LinkedList<E> extends AbstractList<E> {
     private static class Node<E> {
         E element;
         Node<E> next;
+        Node<E> prev;
 
-        public Node(E element, Node<E> next) {
+        public Node(Node<E> prev, E element, Node<E> next) {
+            this.prev = prev;
             this.element = element;
             this.next = next;
         }
@@ -121,6 +151,25 @@ public class LinkedList<E> extends AbstractList<E> {
         protected void finalize() throws Throwable {
             super.finalize();
             System.out.println("释放了");
+        }
+
+        @Override
+        public String toString() {
+            StringBuilder sb = new StringBuilder();
+            if (prev != null) {
+                sb.append(prev.element);
+            } else {
+                sb.append("null");
+            }
+            sb.append("_");
+            sb.append(element);
+            sb.append("_");
+            if (next != null) {
+                sb.append(next.element);
+            } else {
+                sb.append("null");
+            }
+            return sb.toString();
         }
     }
 }
