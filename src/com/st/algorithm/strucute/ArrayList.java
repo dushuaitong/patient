@@ -1,15 +1,13 @@
 package com.st.algorithm.strucute;
 
+import com.st.algorithm.strucute.common.AbstractList;
+
 /**
  * @author dushuaitong
  * @description: 动态数组
  * @date 2021/11/23
  */
-public class ArrayList<E> implements List<E> {
-    /**
-     * 大小
-     */
-    private int size;
+public class ArrayList<E> extends AbstractList<E> {
     /**
      * 元素
      */
@@ -18,7 +16,6 @@ public class ArrayList<E> implements List<E> {
      * 默认容量
      */
     private static final int DEFAULT_CAPACITY = 10;
-    private static final int ELEMENT_NOTFOUND = -1;
 
     public ArrayList(int capacity) {
         capacity = Math.max(capacity, DEFAULT_CAPACITY);
@@ -27,26 +24,6 @@ public class ArrayList<E> implements List<E> {
 
     public ArrayList() {
         this(DEFAULT_CAPACITY);
-    }
-
-    @Override
-    public int size() {
-        return size;
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
-    @Override
-    public boolean contains(E element) {
-        return indexOf(element) != ELEMENT_NOTFOUND;
-    }
-
-    @Override
-    public void add(E element) {
-        add(size, element);
     }
 
     @Override
@@ -86,11 +63,6 @@ public class ArrayList<E> implements List<E> {
     }
 
     @Override
-    public void remove(E element) {
-        remove(indexOf(element));
-    }
-
-    @Override
     public int indexOf(E element) {
         if (element == null) {
             for (int i = 0; i < size; i ++) {
@@ -114,22 +86,6 @@ public class ArrayList<E> implements List<E> {
             elements[i] = null;
         }
         size = 0;
-    }
-
-    private void rangeCheck(int index) {
-        if (index < 0 || index >= size) {
-            outOfBounds(index);
-        }
-    }
-
-    private void rangeCheckForAdd(int index) {
-        if (index < 0 || index > size) {
-            outOfBounds(index);
-        }
-    }
-
-    private void outOfBounds(int index) {
-        throw new IndexOutOfBoundsException("Index: " + index + "Size: " + size);
     }
 
     private void ensureCapacity(int size) {

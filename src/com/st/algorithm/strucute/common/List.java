@@ -1,4 +1,4 @@
-package com.st.algorithm.strucute;
+package com.st.algorithm.strucute.common;
 
 /**
  * @author dushuaitong
@@ -6,6 +6,7 @@ package com.st.algorithm.strucute;
  * @date 2021/11/23
  */
 public interface List<E> {
+    static final int ELEMENT_NOTFOUND = -1;
     /**
      * 大小
      */

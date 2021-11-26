@@ -1,0 +1,6 @@
+
+m
+java:S1206"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã8†‰ÂêÔ/
+O
+java:S1113"-Do not override the Object.finalize() method.(ÖÒ˜Ùùÿÿÿÿ8ÆË¢êÔ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(†©¸¶ıÿÿÿÿ8Á£êÔ/
