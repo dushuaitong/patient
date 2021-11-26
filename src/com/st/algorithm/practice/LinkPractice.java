@@ -42,4 +42,22 @@ public class LinkPractice {
         return newHeader;
     }
 
+    /**
+     * 证明一个链表有环 快慢指针
+     */
+    public static Boolean hasCycle(Node<Integer> node) {
+        if (node == null || node.next == null) {
+            return false;
+        }
+        Node<Integer> slow = node;
+        Node<Integer> fast = node.next;
+        while (fast == null || fast.next == null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (fast == slow) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
