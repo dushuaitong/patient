@@ -18,6 +18,19 @@ public class Main {
         test(new LinkedList<>());
         test(new SingleCircleLinkedList<>());
         test(new LinkedCircleList<>());
+        testStack();
+    }
+
+    public static void testStack() {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(11);
+        stack.push(12);
+        stack.push(13);
+        stack.push(14);
+
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop());
+        }
     }
 
     public static void testDDLinkList() {
