@@ -16,6 +16,8 @@ public class Main {
         test(new SingleLinkedList<>());
         test(new SingleLinkedListHeader<>());
         test(new LinkedList<>());
+        test(new SingleCircleLinkedList<>());
+        test(new LinkedCircleList<>());
     }
 
     public static void testDDLinkList() {
