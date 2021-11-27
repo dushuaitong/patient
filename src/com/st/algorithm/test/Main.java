@@ -11,14 +11,79 @@ import com.st.algorithm.strucute.common.List;
  */
 public class Main {
     public static void main(String[] args) {
-        test(new ArrayList<>());
-        test(new ArrayListTrim<>());
-        test(new SingleLinkedList<>());
-        test(new SingleLinkedListHeader<>());
-        test(new LinkedList<>());
-        test(new SingleCircleLinkedList<>());
-        test(new LinkedCircleList<>());
-        testStack();
+//        test(new ArrayList<>());
+//        test(new ArrayListTrim<>());
+//        test(new SingleLinkedList<>());
+//        test(new SingleLinkedListHeader<>());
+//        test(new LinkedList<>());
+//        test(new SingleCircleLinkedList<>());
+//        test(new LinkedCircleList<>());
+//        testStack();
+//        testQueue();
+//        testDoubleQueue();
+//        testCycleQueue();
+        testCycleDoubleQueue();
+    }
+    public static void testCycleDoubleQueue() {
+        CycleDoubleQueue<Integer> cycleQueue = new CycleDoubleQueue<>();
+        for (int i = 0; i < 10; i ++) {
+            cycleQueue.enQueueFront(i + 1);
+            cycleQueue.enQueueRear(i + 100);
+        }
+        System.out.println(cycleQueue);
+
+        while (!cycleQueue.isEmpty()) {
+            System.out.println(cycleQueue.deQueueRear());
+        }
+
+    }
+
+    public static void testCycleQueue() {
+        CycleQueue<Integer> cycleQueue = new CycleQueue<>();
+        for (int i = 0; i < 15; i ++) {
+            cycleQueue.enQueue(i);
+        }
+        System.out.println(cycleQueue);
+        for (int i = 0; i < 7; i ++) {
+            cycleQueue.deQueue();
+        }
+        for (int i = 0; i < 9; i ++) {
+            cycleQueue.enQueue(i);
+        }
+        System.out.println(cycleQueue);
+    }
+
+    public static void testDoubleQueue() {
+        DoubleQueue<Integer> queue = new DoubleQueue<>();
+        queue.enQueueFront(11);
+        queue.enQueueFront(12);
+        queue.enQueueFront(13);
+        queue.enQueueFront(14);
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.deQueueFront());
+        }
+
+        queue.enQueueRear(11);
+        queue.enQueueRear(12);
+        queue.enQueueRear(13);
+        queue.enQueueRear(14);
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.deQueueRear());
+        }
+    }
+
+    public static void testQueue() {
+        Queue<Integer> queue = new Queue<>();
+        queue.enQueue(11);
+        queue.enQueue(12);
+        queue.enQueue(13);
+        queue.enQueue(14);
+
+        while (!queue.isEmpty()) {
+            System.out.println(queue.deQueue());
+        }
     }
 
     public static void testStack() {

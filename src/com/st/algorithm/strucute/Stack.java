@@ -33,4 +33,8 @@ public class Stack<E> {
     public E top() {
         return elements.get(size() - 1);
     }
+
+    public void clear() {
+        elements.clear();
+    }
 }

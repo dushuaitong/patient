@@ -1,0 +1,7 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(èçì“
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ßøÚøÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÅÍ’øÿÿÿÿ
+X
+java:S22598"BA "NullPointerException" could be thrown; "fast" is nullable here.(©ï®·
