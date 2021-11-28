@@ -8,10 +8,6 @@
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 U
 %src/com/st/algorithm/test/Person.java,1/7/17975825a569cca96743adbd44d8b5a00a620cf4
-c
-3src/com/st/algorithm/test/AlgorithmCorrectTest.java,a/c/ac37993a75b0df2e8fee9da1adba6848bafe64b8
-\
-,src/com/st/algorithm/test/AlgorithmTest.java,f/a/fad52dc4caeac77d379faea614217a42ad27a128
 \
 ,src/com/st/algorithm/common/util/Arrays.java,d/a/da7d11a5b8355e2ec97afe049a4347ee534422ee
 ^
@@ -35,14 +31,8 @@ Y
 \
 ,src/com/st/algorithm/common/util/Assert.java,d/c/dc537eec6c070cab90a661d358f45b8bcc05b866
 i
-9src/com/st/algorithm/strucute/SingleLinkedListHeader.java,a/e/ae173098636e18848d04b143d8bc62c6f067feac
-c
-3src/com/st/algorithm/strucute/SingleLinkedList.java,9/d/9d6d0b92ce336c6a27e160eb2903bc57d34d261a
-i
 9src/com/st/algorithm/strucute/SingleCircleLinkedList.java,a/c/acf04d47d0b44515f59b4e15c58fea399cc749ea
 c
 3src/com/st/algorithm/strucute/LinkedCircleList.java,d/2/d2248a06bf15b8a62e554deaf88f6f27e1a9eabe
-`
-0src/com/st/algorithm/strucute/ArrayListTrim.java,d/c/dcebac84f4e240269369ea31c1a5ef62babaf44a
 ^
 .src/com/st/algorithm/strucute/common/List.java,7/a/7a7adb33052882d3a9c35ba11ccf2bc790b9a436
