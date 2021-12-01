@@ -87,8 +87,10 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
             } else if (node == node.parent.right) {
                 node.parent.right = replacement;
             }
+            afterRemove(node);
         } else if (node.parent == null) {
             root = null;
+            afterRemove(root);
         } else {
             // 叶子节点非根节点
             if (node == node.parent.left) {
@@ -96,6 +98,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
             } else {
                 node.parent.right = null;
             }
+            afterRemove(node);
         }
     }
 

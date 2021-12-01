@@ -19,7 +19,8 @@ public class BinaryTreeTest {
         tree.add(12);
         tree.add(34);
         tree.add(20);
-        // tree.remove(20);
+        tree.remove(20);
+        tree.remove(12);
         BinaryTrees.println(tree);
 //        System.out.println(tree.height2());
 //        System.out.println(tree.height());

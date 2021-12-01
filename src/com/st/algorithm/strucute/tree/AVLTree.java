@@ -29,6 +29,17 @@ public class AVLTree<E> extends BinarySearchTree<E> {
     }
 
     @Override
+    protected void afterRemove(BinaryNode<E> node) {
+        while ((node = node.parent) != null) {
+            if (isBanlance(node)) {
+                updateHeight(node);
+            } else {
+                rebalance(node);
+            }
+        }
+    }
+
+    @Override
     protected BinaryNode<E> createNode(E element, BinaryNode<E> parent) {
         return new AVLNode<>(element, parent);
     }
@@ -61,8 +72,8 @@ public class AVLTree<E> extends BinarySearchTree<E> {
         } else {
             if (node.isLeftChild()) {
                 // RL
-                roteRigth((AVLNode<E>)gNode);
-                roteLeft(parent);
+                roteRigth(parent);
+                roteLeft((AVLNode<E>)gNode);
             } else {
                 // RR
                 roteLeft((AVLNode<E>)gNode);
@@ -99,7 +110,7 @@ public class AVLTree<E> extends BinarySearchTree<E> {
         if (node.isLeftChild()) {
             node.left.parent = parent;
         } else if (node.isRightChild()) {
-            node.right.parent = parent;
+            node.parent.right = parent;
         } else { // 根节点
             root = parent;
         }

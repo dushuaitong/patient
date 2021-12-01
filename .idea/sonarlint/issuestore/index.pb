@@ -4,8 +4,6 @@
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 ;
 patient.iml,4/3/438b8f6c705c4004e9ed8556fd4533d79aa9bd83
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 U
 %src/com/st/algorithm/test/Person.java,1/7/17975825a569cca96743adbd44d8b5a00a620cf4
 \
