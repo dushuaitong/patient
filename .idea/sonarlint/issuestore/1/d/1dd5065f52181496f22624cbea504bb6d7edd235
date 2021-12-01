@@ -1,0 +1,31 @@
+
+V	java:S125"<This block of commented-out lines of code should be removed.(Ô€ëşÿÿÿÿ
+N	java:S106!"9Replace this use of System.out or System.err by a logger.(Ï¼â
+N	java:S106$"9Replace this use of System.out or System.err by a logger.(´æêœ
+N	java:S106."9Replace this use of System.out or System.err by a logger.(Ï¼â
+N	java:S1065"9Replace this use of System.out or System.err by a logger.(Ï¼â
+N	java:S106@"9Replace this use of System.out or System.err by a logger.(áÂÙ
+N	java:S106I"9Replace this use of System.out or System.err by a logger.(“¦›€
+S	java:S106U"9Replace this use of System.out or System.err by a logger.(­ğºÑÿÿÿÿÿ
+N	java:S106a"9Replace this use of System.out or System.err by a logger.(ÊØ¡Œ
+V	java:S125j"<This block of commented-out lines of code should be removed.(ï×Æıÿÿÿÿÿ
+S	java:S106p"9Replace this use of System.out or System.err by a logger.(ëÊĞüÿÿÿÿÿ
+j
+java:S1215q"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“
+V	java:S125y"<This block of commented-out lines of code should be removed.(ï×Æıÿÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ëÊĞüÿÿÿÿÿ
+Q	java:S125}"<This block of commented-out lines of code should be removed.(®‡É¡
+k
+java:S1215€"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“
+W	java:S125ˆ"<This block of commented-out lines of code should be removed.(ï×Æıÿÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ëÊĞüÿÿÿÿÿ
+R	java:S125"<This block of commented-out lines of code should be removed.(ÏÏÿÔ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ßª³Ñüÿÿÿÿ
+k
+java:S1215"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“
+W	java:S125˜"<This block of commented-out lines of code should be removed.(ï×Æıÿÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ëÊĞüÿÿÿÿÿ
+R	java:S125œ"<This block of commented-out lines of code should be removed.(®‡É¡
+k
+java:S1215Ÿ"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“
+T	java:S106°"9Replace this use of System.out or System.err by a logger.(ã¿¢Ôùÿÿÿÿ

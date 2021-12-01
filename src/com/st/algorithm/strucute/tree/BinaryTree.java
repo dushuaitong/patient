@@ -245,6 +245,12 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         }
     }
 
+    protected void afterAdd(BinaryNode<E> node) {}
+
+    protected BinaryNode<E> createNode(E element,BinaryNode<E> parent) {
+        return new BinaryNode(element, parent);
+    }
+
     @Override
     public Object root() {
         return root;

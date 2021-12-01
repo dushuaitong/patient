@@ -8,7 +8,7 @@ import java.util.Comparator;
  * @date 2021/11/27
  */
 public class BinarySearchTree<E> extends BinaryTree<E> {
-    private Comparator<E> comparator;
+    protected Comparator<E> comparator;
 
     public BinarySearchTree() {
         this(null);
@@ -22,8 +22,9 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
         elementNoNullCheck(element);
         if (root == null) {
             // 第一个节点
-            root = new BinaryNode<>(element, null);
+            root = createNode(element, null);
             size++;
+            afterAdd(root);
             return;
         }
 
@@ -42,12 +43,13 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
                 return;
             }
         }
-        BinaryNode<E> newNode = new BinaryNode<>(element, parentNode);
+        BinaryNode<E> newNode = createNode(element, parentNode);;
         if (cmp > 0) {
             parentNode.right = newNode;
         } else if (cmp < 0) {
             parentNode.left = newNode;
         }
+        afterAdd(newNode);
         size ++;
     }
 

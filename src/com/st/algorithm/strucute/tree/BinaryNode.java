@@ -10,6 +10,8 @@ public class BinaryNode<E> {
     public BinaryNode<E> left ;
     public BinaryNode<E> right;
     public BinaryNode<E> parent;
+    public BinaryNode() {
+    }
 
     public BinaryNode(E element,BinaryNode<E> parent) {
         this.element = element;
@@ -22,5 +24,17 @@ public class BinaryNode<E> {
 
     public boolean hasTowChileren() {
         return left != null && right != null;
+    }
+
+    public boolean isLeftChild() {
+        if (parent == null) { return false; }
+        if (parent.left == this) { return true; }
+        return false;
+    }
+
+    public boolean isRightChild() {
+        if (parent == null) { return false; }
+        if (parent.right == this) { return true; }
+        return false;
     }
 }

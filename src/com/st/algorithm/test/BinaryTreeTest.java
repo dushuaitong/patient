@@ -1,6 +1,7 @@
 package com.st.algorithm.test;
 
 import com.st.algorithm.common.printer.BinaryTrees;
+import com.st.algorithm.strucute.tree.AVLTree;
 import com.st.algorithm.strucute.tree.BinarySearchTree;
 
 import java.util.function.Consumer;
@@ -12,13 +13,13 @@ import java.util.function.Consumer;
  */
 public class BinaryTreeTest {
     public static void main(String[] args) {
-        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+        AVLTree<Integer> tree = new AVLTree<>();
         tree.add(35);
         tree.add(33);
         tree.add(12);
         tree.add(34);
         tree.add(20);
-        tree.remove(20);
+        // tree.remove(20);
         BinaryTrees.println(tree);
 //        System.out.println(tree.height2());
 //        System.out.println(tree.height());
