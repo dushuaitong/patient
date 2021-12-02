@@ -2,9 +2,6 @@ package com.st.algorithm.test;
 
 import com.st.algorithm.common.printer.BinaryTrees;
 import com.st.algorithm.strucute.tree.AVLTree;
-import com.st.algorithm.strucute.tree.BinarySearchTree;
-
-import java.util.function.Consumer;
 
 /**
  * @author dushuaitong

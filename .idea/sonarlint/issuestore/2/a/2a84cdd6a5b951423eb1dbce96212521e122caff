@@ -1,0 +1,14 @@
+
+M
+java:S3740ü"/Provide the parametrized type for this generic.(‚†Ğû8÷ò€×/
+Ÿ
+java:S1186ø"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ü¬İ8úò€×/
+
+java:S1186ù"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ü–’8ˆ¥ºœ×/
+V	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(Ò·”Â8ˆó€×/
+M
+java:S5411»"*Use the primitive boolean expression here.(çœàıÿÿÿÿ8—ó€×/
+\
+java:S2259f"?A "NullPointerException" could be thrown; "p" is nullable here.(Ä‚–®8ãø€×/
+\
+java:S2259z"?A "NullPointerException" could be thrown; "p" is nullable here.(ÑŞ³µ8ãø€×/
